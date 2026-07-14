@@ -1,0 +1,10 @@
+stages:
+  - validate
+
+validate-docs:
+  stage: validate
+  image: alpine:latest
+  script:
+    - echo "Validando documentación del proyecto HotelReserva"
+    - ls -la *.md
+    - echo "Documentación presente. OK."
