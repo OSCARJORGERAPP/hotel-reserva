@@ -3,7 +3,9 @@ stages:
 
 validate-docs:
   stage: validate
-  image: alpine:latest
+  tags:
+    - cloudrun
+  timeout: 10m
   script:
     - echo "Validando documentación del proyecto HotelReserva"
     - ls -la *.md
